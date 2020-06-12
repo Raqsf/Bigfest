@@ -104,6 +104,19 @@
                     <h2>O MEU CARRINHO</h2>
                 </div>
             </div>
+            <div class="container"  style="padding-top: 20px; padding-bottom: 50px">
+        <div class="row">
+        <!-- ko foreach: carrinho -->
+          <div id="item" class="col-md-2">
+            <span style="float:right;"><a class="btn btn-outline-secondary btn-sm" id="detalhes" style="color: #999; font-size: 1.0em;"></a><i class='fa fa-circle' data-bind="style:{color: disponibilidade == true ? 'rgb(87, 197, 105)' : 'red'} "></i></a></span>
+            <img data-bind="attr:{src:img}" id="imagens" class="m-2" style = "width: 50px;";/><br />
+            <span data-bind="text: nome" style="text-align: center; display: block;"></span><br />
+            <span>Preço: </span><span data-bind="text: preco" style="float:right;"></span><span style="float: right;"><b>€</b></span><br />
+          </div> 
+        <!-- /ko -->
+        </div>
+      </div>
+            
             <button id="myBtn">Confirmar compra</button>
 
             <!-- The Modal -->
